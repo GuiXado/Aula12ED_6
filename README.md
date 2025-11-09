@@ -2,7 +2,7 @@
 ## Atividade 6
 
 6. Considerando a biblioteca Lista Genérica, já criada, faça:
-7. 
+   
 Criar um projeto Java e importe a biblioteca Lista.
 
 • O projeto deve ciar uma tabela de espalhamento para resolver o problema de inserir, consultar e remover para uma loja de departamentos com a estrutura abaixo;
