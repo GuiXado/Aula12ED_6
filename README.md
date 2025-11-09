@@ -68,6 +68,9 @@ automotivo - Peças e acessórios para automóveis
 brinquedos - Itens infantis
 
 bebês - Itens para a primeira infância
-gi� cards - Cartões presente
+
+gift cards - Cartões presente
+
 pet shop - Comida e acessórios para pet
+
 papelaria - Itens de papelaria
