@@ -29,8 +29,8 @@ public class Principal {
 				 		cl.inserir(l);
 				 		break;
 				 	case 2:
-				 		System.out.println(cl.buscar(JOptionPane.showInputDialog("Digite o nome da loja para consulta: ")));
-				 		break;
+				 		cl.mostrarBusca(JOptionPane.showInputDialog("Digite o nome da loja para consulta: "));
+						break;
 				 	case 3:
 				 		String lojaR = JOptionPane.showInputDialog("Digite o nome da loja que deseja remover: ");
 				 		cl.excluir(lojaR);
@@ -42,7 +42,6 @@ public class Principal {
 				 		JOptionPane.showMessageDialog(null, "Inválido!");
 				 }
 				 
-				 
 			 } while (opc != 9);
 		 } catch (Exception e) {
 			 System.err.println(e.getMessage());
@@ -51,3 +50,4 @@ public class Principal {
 	}
 
 }
+
