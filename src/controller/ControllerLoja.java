@@ -24,31 +24,28 @@ public class ControllerLoja {
 		tabelaHashLoja[posicao].addFirst(loja);
     }
 	
-	public Loja buscar(String lojaConsulta) throws Exception {
+	public void mostrarBusca(String lojaConsulta) throws Exception {
+		int[] valores = buscar(lojaConsulta);
+    	Loja loja = (Loja) tabelaHashLoja[valores[0]].get(valores[1]);
+    	System.out.println(loja.toString());
+    }
+	
+	public void excluir(String lojaRemove) throws Exception {
+		int[] valores = buscar(lojaRemove);
+        tabelaHashLoja[valores[0]].remove(valores[1]);
+    }
+	
+	private int[] buscar(String lojaConsulta) throws Exception {
     	for (int i = 0; i < tabelaHashLoja.length; i++) {
             int tamanho = tabelaHashLoja[i].size();
             for (int j = 0; j < tamanho; j++) {
                 Loja loja = (Loja) tabelaHashLoja[i].get(j);
                 if (loja.nome.equalsIgnoreCase(lojaConsulta)) {
-                    return loja;
+                	return new int[]{i, j};
                 }
             }
         }
         throw new Exception("Loja não encontrada");
-    }
-	
-	public void excluir(String lojaRemove) throws Exception {
-    	for (int i = 0; i < tabelaHashLoja.length; i++) {
-            int tamanho = tabelaHashLoja[i].size();
-            for (int j = 0; j < tamanho; j++) {
-                Loja p = (Loja) tabelaHashLoja[i].get(j);
-                if (p.nome.equalsIgnoreCase(lojaRemove)) {
-                	tabelaHashLoja[i].remove(j);
-                    return;
-                }
-            }
-        }
-        throw new Exception("Loja não encontrada para exclusão");
     }
 	
 	public void carregaLoja() throws Exception{
@@ -87,3 +84,4 @@ public class ControllerLoja {
 	}
 	
 }
+
